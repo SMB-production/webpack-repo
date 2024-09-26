@@ -2,7 +2,7 @@
   "name": "production-project",
   "version": "1.0.0",
   "scripts": {
-    "built": "webpack"
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
