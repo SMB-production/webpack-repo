@@ -30,9 +30,6 @@ const config:webpack.Configuration = {
     extensions: ['.tsx', '.ts', '.js', 'jsx'],
   },
 }
-
-// TODO: сделать экспорт объекта config
-
 export default config
 
 
