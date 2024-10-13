@@ -7,6 +7,5 @@ export function buildLoaders(): webpack.RuleSetRule[] {
       exclude: /node_modules/,
    }
 
-   return
-   ;[typescriptLoaders]
+   return [typescriptLoaders]
 }
