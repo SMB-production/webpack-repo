@@ -1,23 +1,21 @@
 import path from 'path'
 import webpack from 'webpack'
-import { buildWebpackConfig } from './config/buildComponents/buildWebpackConfig'
-import type { BuildPaths } from './config/buildComponents/types/config'
+import {buildWebpackConfig} from './config/buildComponents/buildWebpackConfig'
+import type {BuildPaths} from './config/buildComponents/types/config'
 
 const paths: BuildPaths = {
-	entry: path.resolve(__dirname, 'src', 'index.ts'),
-	
-	build: path.resolve(__dirname, 'build'),
-	html: path.resolve(__dirname, 'public','index.html')
+   entry: path.resolve(__dirname, 'src', 'index.ts'),
+
+   build: path.resolve(__dirname, 'build'),
+   html: path.resolve(__dirname, 'public', 'index.html'),
 }
-const mode = 'development';
+const mode = 'development'
 const isDev = mode === 'development'
 
-const config:webpack.Configuration = buildWebpackConfig({
-	mode: 'development',
-	paths,
-	isDev,
+const config: webpack.Configuration = buildWebpackConfig({
+   mode: 'development',
+   paths,
+   isDev,
 })
 
-export default config
-
-
+// export default config
