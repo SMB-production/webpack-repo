@@ -1,5 +1,5 @@
 import {createRoot} from 'react-dom/client'
-import {Counter} from './components/Counter'
+import {Counter} from './components/UI components/Counter'
 
 const container = document.getElementById('root')
 const root = createRoot(container)
