@@ -1,4 +1,4 @@
-import {Counter} from './UI components/Counter'
+import {Counter} from './ui-components/Counter'
 
 export const App = () => {
    return <Counter />

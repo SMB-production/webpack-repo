@@ -1,10 +1,6 @@
 import {createRoot} from 'react-dom/client'
-import {Counter} from './components/UI components/Counter'
+import {App} from './components/App'
 
 const container = document.getElementById('root')
 const root = createRoot(container)
-root.render(
-   <div>
-      <Counter />
-   </div>,
-)
+root.render(<App />)
