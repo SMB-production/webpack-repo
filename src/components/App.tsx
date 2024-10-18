@@ -1,4 +1,4 @@
-import Counter from './ui-components/Counter'
+import {Counter} from './ui-components/Counter'
 import '../index.scss'
 
 export const App = () => {
