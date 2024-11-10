@@ -9,5 +9,3 @@ export function classNames(cls: string, mods: Mods, additional: string[]): strin
          .map(([key, value]) => `${key} ${value ? 'true' : 'false'}`),
    ].join(' ')
 }
-
-classNames('removeBtn', {hovered: true, selectable: true, red: false}, ['pdg'])
