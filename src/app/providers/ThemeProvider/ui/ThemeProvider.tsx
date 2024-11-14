@@ -1,5 +1,5 @@
 import React, {FC, useState, useMemo} from 'react'
-import {isStringInLiteralTypeFactory} from 'utils/typeGuards/isStringInLiteralTypeFactory'
+import {isStringInLiteralTypeFactory} from 'shared/utils/typeGuards/isStringInLiteralTypeFactory'
 import {LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext} from '../lib/ThemeContext'
 
 const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) || Theme.LIGHT
