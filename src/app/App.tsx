@@ -5,10 +5,9 @@ import {classNames} from 'shared/lib/classNames/classNames'
 import {useTheme} from 'app/providers/ThemeProvider'
 
 export const App = () => {
-   const {theme, toggleTheme} = useTheme()
+   const {theme} = useTheme()
    return (
       <div className={classNames('app', {hovered: true, selected: false}, [theme])}>
-         <button onClick={toggleTheme}>Toggle Theme</button>
          <Link to={'/'}>Главная страница</Link>
          <Link to={'/about'}>О сайте</Link>
          <AppRouter />
