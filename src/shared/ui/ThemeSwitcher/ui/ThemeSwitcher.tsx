@@ -1,3 +1,4 @@
+import type {FC} from 'react'
 import {classNames} from 'shared/lib/classNames/classNames'
 import cls from './ThemeSwitcher.module.scss'
 import {Theme, useTheme} from 'app/providers/ThemeProvider'
@@ -9,7 +10,7 @@ interface ThemeSwitcherProps {
    className?: string
 }
 
-export const ThemeSwitcher = ({className}: ThemeSwitcherProps) => {
+export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({className}) => {
    const {theme, toggleTheme} = useTheme()
 
    return (
