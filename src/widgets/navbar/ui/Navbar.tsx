@@ -1,11 +1,10 @@
-import type {NavLinkProps} from 'react-router-dom'
 import {classNames} from 'shared/lib/classNames/classNames'
 import React from 'react'
 import {AppLink, AppLinkTheme} from 'shared/ui/AppLink/AppLink'
 import cls from './Navbar.module.scss'
 import type {FC} from 'react'
 
-interface NavbarProps extends NavLinkProps {
+interface NavbarProps {
    className?: string
 }
 
