@@ -9,13 +9,15 @@ interface SidebarProps {
 
 export const Sidebar = ({className}: SidebarProps) => {
    const [collapsed, setCollapsed] = useState(false)
-   const onToggle = () => {
-      setCollapsed(prev => !prev)
-   }
+   const onToggle = () => setCollapsed(prev => !prev)
+
    return (
-      <div className={classNames(cls.Sidebar, {[cls.collapsed]: collapsed}, [className])}>
-         <button onClick={onToggle}>toggle</button>
-         <div className={cls.switshers}>
+      <div className={classNames(cls.sidebar, {[cls.collapsed]: collapsed}, [className])}>
+         <div className={cls.sidebarbutton}>
+            <button onClick={onToggle}>toggle</button>
+         </div>
+
+         <div className={cls.switchers}>
             <ThemeSwitcher />
          </div>
       </div>
