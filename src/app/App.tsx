@@ -1,5 +1,7 @@
 import {AppRouter} from 'app/providers/router'
 import './styles/index.scss'
+import {Suspense, useTransition} from 'react'
+import {useTranslation} from 'react-i18next'
 import {classNames} from 'shared/lib/classNames/classNames'
 import {useTheme} from 'app/providers/ThemeProvider'
 import {Navbar} from 'widgets/navbar'
@@ -9,11 +11,13 @@ export const App = () => {
    const {theme, toggleTheme} = useTheme()
    return (
       <div className={classNames('app', {hovered: true, selected: false}, [theme])}>
-         <Navbar />
-         <div className="content-page">
-            <Sidebar />
-            <AppRouter />
-         </div>
+         <Suspense fallback={''}>
+            <Navbar />
+            <div className="content-page">
+               <Sidebar />
+               <AppRouter />
+            </div>
+         </Suspense>
       </div>
    )
 }
