@@ -21,6 +21,7 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
             loader: 'css-loader',
             options: {
                modules: {
+                  exportLocalsConvention: 'dashes',
                   namedExport: false,
                   auto: (resPath: string) => Boolean(resPath.includes('.module.')),
                   localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]',
