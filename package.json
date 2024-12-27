@@ -9,8 +9,8 @@
       "start": "webpack serve --env port=3000",
       "build:prod": "webpack --env mode=production",
       "build:dev": "webpack --env mode=development",
-      "lint:ts" : "eslint \"**/*.{ts,tsx}\"",
-      "lint:ts:fix" : "eslint \"**/*.{ts,tsx}\" --fix"
+      "lint:ts": "eslint \"**/*.{ts,tsx}\"",
+      "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix"
    },
    "keywords": [],
    "author": "",
@@ -32,6 +32,7 @@
       "css-loader": "^7.1.2",
       "eslint": "^9.17.0",
       "eslint-plugin-react": "^7.37.3",
+      "eslint-plugin-react-hooks": "^5.1.0",
       "file-loader": "^6.2.0",
       "globals": "^15.14.0",
       "html-webpack-plugin": "^5.5.0",
