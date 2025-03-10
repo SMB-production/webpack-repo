@@ -2,23 +2,23 @@ import globals from "globals";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
-import { createESLintConfig } from 'eslint-config-react-app';
-import eslintPluginReact from 'eslint-plugin-react';
-import eslintReactHooks from "eslint-plugin-react-hooks"
-
-
-
 
 export default [
-  {files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"]},
-  {languageOptions: { globals: globals.browser }},
+  {files: ["**/*.{ts,tsx}"]},
+  {languageOptions: { globals: globals.browser, ecmaVersion: 2020 }},
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
-  
+  {
+    plugins: {
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+    },
+  },
+  {
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    }
+  }
 ];
-
-const config = createESLintConfig({
-  extends: ['eslint-config-react-app'],
-
-});
