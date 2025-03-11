@@ -1,4 +1,3 @@
-import React from 'react'
 import {classNames} from 'shared/lib/classNames/classNames'
 import {Button} from 'shared/ui/Button/Button'
 import {LangSwitcher} from 'shared/ui/LangSwitcher/ui/LangSwitcher'
