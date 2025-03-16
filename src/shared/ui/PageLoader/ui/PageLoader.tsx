@@ -6,18 +6,10 @@ interface PageLoaderProps {
 }
 
 export const PageLoader = ({className}: PageLoaderProps) => {
+   const divs = Array.from(Array(8).keys()).map(item => <div key={item}></div>)
    return (
       <div className={classNames('page__loader')}>
-         <div className="lds-roller">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-         </div>
+         <div className="lds-roller">{divs}</div>
       </div>
    )
 }
